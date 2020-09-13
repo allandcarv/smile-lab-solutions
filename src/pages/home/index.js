@@ -8,10 +8,6 @@ const Home = () => {
   const [currencies, setCurrencies] = useState({});
 
   const handleClick = useCallback(() => {
-    console.log(currencies);
-    console.log(fromCurrency);
-    console.log(toCurrency);
-
     const keys = Object.keys(currencies);
     const values = Object.values(currencies);
 
@@ -19,7 +15,7 @@ const Home = () => {
 
     setConvert(inputValue * values[index]);
     
-  }, [currencies, fromCurrency, inputValue, toCurrency]);
+  }, [currencies, fromCurrency, inputValue]);
 
   const handleFromChange = useCallback((event) => {
     setConvert('');
