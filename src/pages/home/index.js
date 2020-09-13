@@ -13,7 +13,7 @@ const Home = () => {
 
     const index = keys.indexOf(fromCurrency);
 
-    setConvert(inputValue * values[index]);
+    setConvert(inputValue / values[index]);
     
   }, [currencies, fromCurrency, inputValue]);
 
